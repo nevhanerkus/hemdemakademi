@@ -1,0 +1,54 @@
+#navbarAltMenu {
+    height: 0px;
+    overflow: auto;
+    transition: all 0.2s;
+}
+
+#mobilNavbarAltMenu{
+    height: 0px;
+    overflow: auto;
+    transition: all 0.2s;
+}
+
+.hemdemSpan {
+    font-family: Lobster;
+    white-space: nowrap
+}
+
+#egitimAciklamaBolumu{
+    height: 200px;
+    overflow: auto;
+    transition: all 0.2s;
+}
+
+.egitim{
+    height: 500px;
+}
+
+
+#bilet-alim-detaylari{
+    height: 0px;
+    overflow: auto;
+    transition: all 0.2s;
+}
+
+#UyelikBilgileriContent{
+    height: 0px;
+    overflow: auto;
+    transition: all 0.2s;
+}
+#BiletDetaylariContent{
+    height: 0px;
+    overflow: auto;
+    transition: all 0.2s;
+}
+#EtkinlikPolitikalariContent{
+    height: 0px;
+    overflow: auto;
+    transition: all 0.2s;
+}
+#OdemeContent{
+    height: 0px;
+    overflow: auto;
+    transition: all 0.2s;
+}

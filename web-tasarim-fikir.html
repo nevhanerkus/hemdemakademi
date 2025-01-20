@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="light">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Tevhid ve Sünnet</title>
+      <link rel="stylesheet" href="src/style.css">
+      <link rel="stylesheet" href="src/header.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+
+        <!--Swiper-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> 
+        <!--Swiper-->
+        
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  </head>
+<body class="w-full overflow-x-hidden"> 
+
+  <div id="popUpBg" hidden class="fixed top-0 bg-black bg-opacity-70 w-screen h-screen z-30">
+    <div class="flex w-full h-full items-center justify-center">
+      <div id="popUp" class="bg-white w-auto p-4 relative rounded-xl">
+        <button id="popUpXButton" class="btn btn-circle btn-ghost absolute right-2 top-2">
+          <svg
+            id="popUpXButtonSvg"
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+        
+        <div >
+          <h3 class="text-2xl font-semibold mt-4">Tevhid Kitabevi</h3>
+          <h4 class="font-semibold italic text-slate-500 mb-5">Kırıkkale Temsilciliği</h4>
+          <p>Yenişehir Mahallesi, 241. Sk. No: 3/22,  </br> 71450 Yahşihan/Kırıkkale</p>
+        </div>
+        <div class="flex flex-row sosyalMedya my-4 space-x-4 text-xl">
+          <a href="" target="_blank"><i class="bi bi-youtube"></i></a>
+          <a href="" target="_blank"><i class="bi bi-twitter-x"></i></a>
+          <a href="" target="_blank"><i class="bi bi-instagram"></i></a>
+          <a href="https://api.whatsapp.com/send?phone=905453731515" target="_blank"><i class="bi bi-whatsapp"></i></a>
+          <a href="mailto:info@tevhidddersleri.org" target="_blank"><i class="bi bi-envelope"></i></a>
+        </div>
+
+        <div class="w-80 h-auto">
+          <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1537132205/news-slider/item-4.webp" alt="news">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="iFromBG" hidden class="fixed top-0 bg-black bg-opacity-70 w-screen h-screen z-30">
+    <div class="flex w-full h-full items-center justify-center">
+      <div id="iForm" class="bg-white md:px-5 pt-8 pb-5 relative rounded-xl">
+        <button id="iFormXButton" class="btn btn-circle btn-ghost absolute right-1 top-1">
+          <svg
+            id="iFromXButtonSvg"
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+        
+        <form class="relative p-4 mx-5">
+          <div class=" grid grid-cols-3 gap-x-0 md:gap-x-6 gap-y-6 md:gap-y-8">
+            <input id="isimIletisim" name="isimIletisim" type="text" autocomplete="given-name" class="col-span-full md:col-span-1 block w-full rounded-md border-0 py-1.5 text-slate-700 font-light shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-slate-500 focus:ring-2 focus:ring-inset focus:ring-sky-500 text-sm sm:leading-6 px-2" placeholder="Adınız">
+
+            <input type="email" name="e-posta" id="epostaIletisim" autocomplete="given-email" class="col-span-full md:col-span-1 block w-full rounded-md border-0 py-1.5 text-slate-700 font-light shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-slate-500 focus:ring-2 focus:ring-inset focus:ring-sky-500 text-sm sm:leading-6 px-2" placeholder="isim@domain.com">
+
+            <input type="tel" name="telefonIletisim" id="telefonIletisim" autocomplete="tel" class="col-span-full md:col-span-1 block w-full rounded-md border-0 py-1.5 text-slate-700 font-light shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-slate-500 focus:ring-2 focus:ring-inset focus:ring-sky-500 text-sm sm:leading-6 px-2" placeholder="5324443322">
+          
+            <input type="text" name="konuIletisim" id="konuIletisim" autocomplete="tel" class="col-span-full block w-full rounded-md border-0 py-1.5 text-slate-700 font-light shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-slate-500 focus:ring-2 focus:ring-inset focus:ring-sky-500 text-sm sm:leading-6 px-2" placeholder="Konu">
+            
+            <textarea id="mesajIletisim" name="mesajIletisim" rows="4" class="col-span-full block w-full rounded-md border-0 py-1.5 text-slate-700 font-light shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-slate-500 focus:ring-2 focus:ring-inset focus:ring-sky-500 text-sm sm:leading-6 px-2" placeholder="Mesajınız"></textarea>
+            
+          </div>
+
+        <div class="mt-6 flex items-center justify-end gap-x-6">
+          <button type="button" class="rounded-md px-3 py-2 text-sm font-semibold leading-6 border hover:border-sky-500 shadow-sm text-gray-700">Temizle</button>
+          <button type="submit" class="rounded-md bg-sky-500 px-3 py-3 text-sm font-semibold text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600">Gönder</button>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <header id="head" class="fixed top-0 z-10 flex justify-center mx-auto w-full md:px-2 text-white font font-extralight">
+    <div class="flex w-full justify-between max-w-7xl">
+      <!-- Sidebar -->
+      <div id="sidebar" class="absolute left-0 z-20 rounded-r-md bg-white text-slate-800 w-56 min-h-screen overflow-y-auto transition-transform transform -translate-x-full ease-in-out duration-300">
+        <!-- Sidebar İçerik -->
+        <div class="m-4 flex flex-col justify-center">
+          <a href="index.html" class=" my-4 flex justify-center text-center"><img class="h-10 w-auto" src="assets/resimler/tevhidvesunnet-logo-siyah.png" alt="Tevhid ve Sünnet"></a>
+            <div class="mt-4 space-y-6 *:font-thin *:relative *:uppercase *:flex *:justify-between *:items-center" id="mobilNavbarWrapper">
+               <!-- Mobil menu JS ile header-menu.json dosyasından alınan veriler ile oluşturulup buraya ekleniyor. -->
+            </div>
+        </div>
+      </div>
+      <!-- Logo & Navbar -->
+      <div class="flex w-full h-16  items-center mx-5" id="logoNavbarContainer">
+        <div class="flex items-center w-full justify-center ">
+          <!-- logo -->
+          <div class="flex items-center">
+            <a href="index.html"><img id="logoGorseli" class="h-8 md:h-12 w-auto" src="assets/resimler/tevhidvesunnet-logo-beyaz.png" alt="Tevhid ve Sünnet"></a>
+          </div>
+          
+          <!-- navbar -->
+          <div class="hidden lg:block w-full">
+            <div class="space-x-2 flex justify-end h-16 items-center" id="navbarWrapper">
+              <!-- <div class="navbarBaslik relative rounded-md hover:bg-gray-700 hover:text-white">
+                <button class="baslikButonu uppercase font-extralight btn btn-ghost btn-sm">Hakkımızda</button>
+                <div id="navbarAltMenu" class="absolute min-w-36 whitespace-nowrap w-auto top-full z-[2] left-0 rounded-b-md *:space-y-2 px-3 *:py-4 bg-slate-800">
+                  <ul>
+                    <li><a href="">madde 2</a></li>
+                    <li><a href="">madde 2</a></li>
+                    <li><a href="">madde 2</a></li>
+                  </ul>
+                </div>
+              </div> -->
+              <!-- Menü, JS ile header-menu.json dosyasından buraya çekiliyor. -->
+            </div>
+          </div>
+          
+            <!-- Hamburger button -->
+
+          <div class="absolute right-5 top-3 w-8 h-8 flex items-center lg:hidden" id="open-sidebar">
+            <label class="btn text-white bg-transparent shadow-none border-0 swap swap-rotate">
+              <!-- this hidden checkbox controls the state -->
+              <input type="checkbox" id="hamburgerCheckbox" class="shadow-none peer sr-only"/>
+            
+              <!-- hamburger icon -->
+              <svg
+                class="swap-off fill-white"
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 512 512">
+                <path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z" />
+              </svg>
+            
+              <!-- close icon -->
+              <svg
+                class="swap-on fill-white" 
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 512 512">
+                <polygon
+                  points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49" />
+              </svg>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="body" class="absolute top-0 w-full">
+    <section id="girisBolumu" class=" min-h-screen bg-fixed bg-cover bg-center bg-no-repeat" style="background-image:url(assets/resimler/TD-merkezBinaResim.png);">
+      <div class="flex items-center justify-center w-full min-h-screen" style="background-color: rgba(0, 0, 0, 0.459);">
+        <div class="flex flex-col items-center space-y-8 mt-72 md:space-y-0 text-white max-w-6xl">
+            <div class="flex flex-col items-center justify-center space-y-4 max-w-2xl">
+              <i class='bi bi-geo-alt font-extralight text-7xl animate-bounce'></i>
+              <h3 class="text-2xl font-light md:text-3xl uppercase">Yeni temsilciliğimiz</h3>
+              <p class="text-base font-extralight md:text-xl px-4 md:px-0 text-center">Rabbimizin lütuf ve ihsanıyla, Tevhid Kitabevi şubemizin bir kapısı da Kırıkkale'de aralandı.</p>
+            </div>
+            <div class="flex justify-center pt-8 w-full space-x-4 md:space-x-8">
+              <a href="#tumTemsilcilikler"><button class="btn btn-outline text-white hover:border  bg-black bg-opacity-35 hover:border-white">Tüm Temsilcilikler</button></a>
+              <button class="kirikkaleIletisimButton btn ">Kırıkkale İletişim</button>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="girisHakkimizda" class="py-14 md:py-24 w-full">
+      <div class="flex w-full flex-col items-center">
+        <div class="flex flex-col w-full items-center max-w-5xl px-2 md:px-0 text-sky-800">
+          <h2 class='flex justify-center text-center text-xl md:text-2xl font-extralight max-w-64 md:max-w-none uppercase'>Rahman ve Rahim olan Allah’ın adıyla</h2>
+          <span class="text-blue-400">_____</span>
+          <div class="text-center mt-5 mb-10 font-serif leading-loose font-extralight">
+            <p>Allah’a hamd, Rasûlü’ne salât ve selam olsun.</p>
+            <p class="mt-3">Bizler, Tevhid ve Sünnet hakikatlerini apaçık beyan ederek islam daveti yapmayı misyon edinmiş bir cemaatiz.
+            İnsanları Tevhid ve Sünnet’in esaslarına, Kur’an ve Sünnet’ten muhkem naslar/deliller ile açık, şeffaf ve net bir üslupla davet ederiz. Bunun için birebir daveti esas görmekle birlikte, geniş kitlelere davetimizi ulaştırmak için şer’i açıdan meşru olan iletişim kanallarını kullanmanın gerekliliğine inanırız. Bu bağlamda yazılı, sözlü ve görüntülü medya araçlarını aktif olarak kullanırız. Resmi yayın organlarımız, değerli hocalarımızın ve öğrencilerimizin emekleriyle hazırlanan '<a href="https://tevhiddergisi.org/" class="text-sky-700 hover:text-sky-500 font-medium">Tevhid Dergisi</a>' ve '<a href="https://tevhiddersleri.org/" class="text-sky-700 hover:text-sky-500 font-medium">Tevhid Dersleri</a>' web siteleridir. </p>
+          </div>
+          <!-- <a href="about.html" target="_blank"><span class="font-extralight text-sm text-slate-600 border py-4 px-4 rounded-lg hover:bg-slate-200">Daha fazla bilgi</span></a> -->
+        </div>
+      </div>
+    </section>
+
+    <section id="logolar" class="w-full">
+      <div class="flex w-full flex-col items-center">
+        <!-- <div class="flex flex-col w-full items-center max-w-5xl px-2 md:px-0">
+          <h2 class='flex justify-center text-center text-xl md:text-2xl font-extralight max-w-64 md:max-w-none uppercase'>Tevhid Ekip</h2>
+          <span class="text-purple-500">_____</span>
+        </div> -->
+
+        <div class="logoDonusu w-full overflow-hidden">
+          <div class="logoDonusu-wrapper flex flex-row space-x-10 *:justify-end my-10
+          *:flex *:flex-col *:items-center *:w-auto *:space-y-2 *:min-w-28 *:md:min-w-36">
+            
+            <!-- Logolar buraya "medya-adresleri.json" dosyasından js kodları iler çağırılıyor. -->
+
+            <!-- <div class="logo-card">
+              <img src="assets/resimler/logolar/logo-tevhid-cocuk-dergi.png" class="object-cover w-auto h-20" alt="">
+              <p class="whitespace-nowrap">Logo Adı</p>
+              <div class="flex flex-row space-x-2">
+                <a href="https://www.youtube.com/watch?v=BMjcrh6vD9Y&list=PLGFjVaEW8hd6SVHcC_iEPzbXNtRXGhYcF" target="_blank"><i class="bi bi-play-btn hover:text-sky-600"></i></a>
+                <a href="https://x.com/uyanisofficial" target="_blank"><i class="bi bi-twitter-x hover:text-sky-600"></i></a>
+                <a href="https://www.instagram.com/uyanisofficiall/" target="_blank"><i class="bi bi-instagram hover:text-sky-600"></i></a>
+                <a href="https://t.co/6VaIGtROIe" target="_blank"><i class="bi bi-whatsapp hover:text-sky-600"></i></a>
+                <a href="mailto:info@tevhidddersleri.org" target="_blank"><i class="bi bi-envelope hover:text-sky-600"></i></a>
+                <a href="#" target="_blank"><i class="bi bi-house hover:text-sky-600"></i></a>
+                <a href="#" target="_blank"><i class="bi bi-telegram"></i></a>
+              </div>
+            </div> -->
+
+
+          </div>
+        </div>
+      </div>
+    </section> 
+
+    <section id="kuranMeali" class="py-14 md:py-24 w-full">
+      <div class="flex w-full flex-col items-center">
+        <div class=" grid grid-cols-1 md:grid-cols-2 max-w-5xl px-2 lg:px-0">
+          <div class="flex flex-col justify-center space-y-4">
+            <div class="flex flex-col items-center font-extralight">
+              <div class="flex flex-col w-full items-center justify-center">
+                <h2 class='flex justify-center md: text-xl md:text-2xl font-extralight max-w-64 md:max-w-none uppercase'>Kur'an Meali</h2>
+                <span class="text-cyan-400">______</span>
+              </div>
+              <img class="md:hidden w-60 my-4" src="assets/resimler/kitaplar/tevhid-mealleri.png" alt="">
+              <p class="text-justify ">Kullarına nur, hidayet, rahmet, şifa, şeref, izzet, ruh, güçlü bir delil, ayetleri Allah tarafından tafsilatlandırılmış, hem açık hem de açıklayıcı bir Kitap bahşeden Allah’a hamd olsun. Salât ve selam, müminlere Allah’ın ayetlerini okuyan, onları arındıran, Kitab’ı ve hikmeti öğreten Resûl’e, pak ailesine ve ashabının üzerine olsun. </p>
+              <p class="text-justify my-4">Mealin mealin yazılış amacı, kaynakları, yararlanılan mealler, anlamlandırmada esas alınan ölçüler ve diğer teknik detaylar hakkında <a href="https://tevhidmeali.com/mukaddime" class="text-sky-700 hover:text-sky-500 font-medium">bilgi için buraya</a> tıklayın.</p>
+            </div>
+            <div class="flex justify-center space-x-4">
+              <a href="https://tevhidmeali.com/" target="_blank"><button class="btn btn-outline text-sky-900">Ücretsiz Meal</button></a>
+              <a href="https://tevhidkitap.net/index.php?route=product/search&search=Tevhid%20Meali%20Kur%27an%C4%B1%20Kerim" target="_blank"><button class="btn btn-outline bg-sky-700 text-white border-sky-700 hover:bg-sky-900">Online Sipariş</button></a>
+            </div>
+          </div>
+          <div class="flex justify-end"><img class="w-96 hidden md:block" src="assets/resimler/kitaplar/tevhid-mealleri.png" alt=""></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="onlineDersleri" class="flex justify-center py-14 md:py-24 w-full min-h-lvh bg-cover bg-bottom bg-no-repeat" style="background-image:url(assets/resimler/online-dersler.jpg);">
+      <div class="flex flex-col justify-center items-center bg-white bg-opacity-20 rounded-xl px-2 md:px-0">
+        <h2 class='flex justify-center text-center text-xl md:text-2xl font-extralight max-w-64 md:max-w-none uppercase'>Online Dersler</h2>
+        <span class="text-blue-400 mb-20">_____</span>
+        <div class="flex items-center justify-center max-w-2xl flex-wrap w-full 
+          *:flex *:shadow-xl *:rounded-xl *:text-center *:font-extralight *:min-w-32 *:p-2 *:m-2 *:border *:items-center *:justify-center *:bg-opacity-60 *:whitespace-nowrap *:bg-white">
+            <a href="https://tevhiddersleri.org/kategori/akaid" class="hover:bg-opacity-70 hover:scale-110"><h2 class="text-base md:text-xl w-full">Akaid</h2></a>
+            <a href="https://tevhiddersleri.org/kategori/akaid" class="hover:bg-opacity-70 hover:scale-110"><h2 class="text-base md:text-xl w-full">Tefsir</h2></a>
+            <a href="https://tevhiddersleri.org/kategori/akaid" class="hover:bg-opacity-70 hover:scale-110"><h2 class="text-base md:text-xl w-full">Fıkıh</h2></a>
+            <a href="https://tevhiddersleri.org/kategori/akaid" class="hover:bg-opacity-70 hover:scale-110"><h2 class="text-base md:text-xl w-full">Hadis</h2></a>
+            <a href="https://tevhiddersleri.org/kategori/akaid" class="hover:bg-opacity-70 hover:scale-110"><h2 class="text-base md:text-xl w-full">Ahlak</h2></a>
+            <a href="https://tevhiddersleri.org/kategori/akaid" class="hover:bg-opacity-70 hover:scale-110"><h2 class="text-base md:text-xl w-full">Menhec</h2></a>
+            <a href="https://tevhiddersleri.org/kategori/akaid" class="hover:bg-opacity-70 hover:scale-110"><h2 class="text-base md:text-xl w-full">Arapça</h2></a>
+            <a href="https://tevhiddersleri.org/kategori/akaid" class="hover:bg-opacity-70 hover:scale-110"><h2 class="text-base md:text-xl w-full">Usul</h2></a>
+            <a href="https://tevhiddersleri.org/kategori/akaid" class="hover:bg-opacity-70 hover:scale-110"><h2 class="text-base md:text-xl w-full">Soru-Cevap</h2></a>
+            <a href="https://tevhiddersleri.org/kategori/akaid" class="hover:bg-opacity-70 hover:scale-110"><h2 class="text-base md:text-xl w-full">Sokak Röportajı</h2></a>
+          </div>
+      </div>
+    </section>
+  
+    <section id="seminerlerimiz" class="flex flex-col items-center w-full min-h-screen bg-gradient-to-r from-[#ededeb] to-[#e5e5e4] py-14 md:py-24">
+      <h2 class='flex justify-center text-center text-xl md:text-2xl font-extralight max-w-64 md:max-w-none uppercase'>Seminerlerimiz</h2>
+        <span class="text-red-500">_____</span>
+        <!-- <p class="font-extralight text-center max-w-2xl m-5 ">(O nur) Allah'ın yüceltilmesine ve içerisinde Allah'ın adının anılmasına izin verdiği evlerde (mecidlerdedir). Orada, gece ve gündüz O'nu tesbih ederler. (24/Nur, 36)</p> -->
+      <container class=" max-w-5xl swiper-slide overflow-auto rounded-lg *:flex *:w-full bg-transparent">
+        <div id="navTabs" class=" overflow-x-scroll *:p-2 *:px-5 *:md:px-2 *:md:w-20 *:w-auto *:text-sm *:rounded-t-lg text-slate-400">
+          <button class="navTab hover:text-white hover:bg-slate-500" style="background-color: white; color: #1e293b;" type="button">Bağcılar</button>
+          <button class="navTab hover:text-white hover:bg-slate-500" type="button">Avcılar</button>
+          <button class="navTab hover:text-white hover:bg-slate-500" type="button">Sultangazi</button>
+          <button class="navTab hover:text-white hover:bg-slate-500" type="button">Konya</button>
+          <button class="navTab hover:text-white hover:bg-slate-500" type="button">Diyarbakır</button>
+          <button class="navTab hover:text-white hover:bg-slate-500" type="button">Van</button>
+          <button class="navTab hover:text-white hover:bg-slate-500" type="button">Etimesgut</button>
+          <button class="navTab hover:text-white hover:bg-slate-500" type="button">Bursa</button>
+          <button class="navTab hover:text-white hover:bg-slate-500" type="button">Erciş</button>
+          <button class="navTab hover:text-white hover:bg-slate-500" type="button">Adana</button>
+          <button class="navTab hover:text-white hover:bg-slate-500" type="button">Kırıkkale</button>
+        </div>
+        <div id="navTabContents" class="bg-white py-10 items-center relative justify-center flex rounded-b-lg ">
+          <button class="rounded-xl animate-pulse bg-white border-none text-center absolute -top-8 z-30 right-2">
+            <i class='bi bi-caret-right'></i>
+          </button>
+          <div class="navTabContent h-full w-full" style="display: block" id="Bağcılar">
+            <div class="flex justify-center">
+              <div class="grid grid-cols-1 gap-4 max-w-3xl justify-center items-center">
+
+                <div class=" card w-auto h-64 shadow-xl overflow-hidden bg-cover bg-top bg-no-repeat text-white" style=" background-image: url(assets/resimler/seminerlerimiz_tefsir.png);">
+                  <div class="flex flex-col items-center justify-center w-full h-full bg-black bg-opacity-50 *:text-center">
+                    <h2 class="text-xl font-medium mb-5">Halis Hoca ile Tefsir Dersleri</h2>
+                  <p>Her Hafta Pazar</p>
+                  <p><i class='bi bi-clock mr-1'></i>09.00 'da</p>
+                  <p class="mt-5">Derslerimize dileyen herkes katılabilir.</p>
+                  </div>
+                </div>
+  
+                <div class="flex flex-row justify-between w-full space-x-4">
+                  <div class=" card w-96 h-64 shadow-xl overflow-hidden bg-cover bg-center bg-no-repeat text-white" style=" background-image: url(assets/resimler/seminer-kadinlar.png);">
+                    <div class="flex flex-col items-center justify-center w-full h-full bg-black bg-opacity-50 *:text-center">
+                      <h2 class="text-xl font-medium mb-5">Kadınlar</h2>
+                    <p>Her Hafta Cumartesi</p>
+                    <p><i class='bi bi-clock mr-1'></i>14.00 'de</p>
+                    </div>
+                  </div>
+                  <div class=" card w-96 h-64 shadow-xl overflow-hidden bg-cover bg-center bg-no-repeat text-white" style=" background-image: url(assets/resimler/seminer-erkekler.png);">
+                    <div class="flex flex-col items-center justify-center w-full h-full bg-black bg-opacity-50 *:text-center">
+                      <h2 class="text-xl font-medium mb-5">Erkekler</h2>
+                    <p>Her Hafta Cumartesi</p>
+                    <p><i class='bi bi-clock mr-1'></i>21.00 'de</p>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="flex flex-col max-w-96 md:max-w-none space-y-2 items-center font-extralight text-center">
+                  <a href="https://maps.app.goo.gl/tGTCUDKHkGjZxqdv8" target="_blank" class="space-x-1 hover:text-sky-600 max-w-72 md:max-w-none"><i class="bi bi-geo-alt"></i><span>Kirazlı Mh. Mahmutbey Cd. No:120 Bağcılar/İstanbul</span></a>
+                  <a href="https://api.whatsapp.com/send?phone=905357664545" target="_blank" class="space-x-1 hover:text-sky-600 text-center"><i class='bi bi-whatsapp'></i><span>+90 535 766 45 45</span></a>
+                  <a href="mailto:info@tevhidddersleri.org"  class=" hover:text-sky-600 text-center space-x-1" target="_blank"><i class='bi bi-envelope'></i><span>info@tevhidddersleri.org</span></a>
+                </div>
+  
+              </div>
+            </div>
+          </div>
+
+          <div class="navTabContent h-full w-full" style="display: none" id="Avcılar">
+            <div class="flex flex-col items-center">
+              <div class=" max-w-96 md:max-w-none font-extralight mb-4 text-center">
+                <p>Avcılar mescidimiz sadece seminer saatlerinde açıktır.</p>
+              </div>
+              <div class="flex flex-row justify-around w-full space-x-4">
+                <div class=" card w-96 h-64 shadow-xl overflow-hidden bg-cover bg-center bg-no-repeat text-white" style=" background-image: url(assets/resimler/seminer-kadinlar.png);">
+                  <div class="flex flex-col items-center justify-center w-full h-full bg-black bg-opacity-50 *:text-center">
+                    <h2 class="text-xl font-medium mb-5">Kadınlar</h2>
+                  <p>Her Hafta Cumartesi</p>
+                  <p><i class='bi bi-clock mr-1'></i>14.00 'de</p>
+                  </div>
+                </div>
+                <div class=" card w-96 h-64 shadow-xl overflow-hidden bg-cover bg-center bg-no-repeat text-white" style=" background-image: url(assets/resimler/seminer-erkekler.png);">
+                  <div class="flex flex-col items-center justify-center w-full h-full bg-black bg-opacity-50 *:text-center">
+                    <h2 class="text-xl font-medium mb-5">Erkekler</h2>
+                  <p>Her Hafta Cumartesi</p>
+                  <p><i class='bi bi-clock mr-1'></i>21.00 'de</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col max-w-96 md:max-w-none space-y-2 items-center font-extralight my-8 text-center">
+                <a href="https://maps.app.goo.gl/Gh2e3Rp3952TqBpRA" target="_blank" class="space-x-1 hover:text-sky-600 max-w-72 md:max-w-none"><i class="bi bi-geo-alt"></i><span>Firüzköy Mh. Kazım Karabekir Cd. Tütün Sk. No:2 Avcılar/İstanbul</span></a>
+                <a href="https://api.whatsapp.com/send?phone=905457621515" target="_blank" class="space-x-1 hover:text-sky-600 text-center"><i class='bi bi-whatsapp'></i><span>+90 545 762 15 15</span></a>
+                <a href="mailto:info@tevhidddersleri.org"  class=" hover:text-sky-600 text-center space-x-1" target="_blank"><i class='bi bi-envelope'></i><span>info@tevhidddersleri.org</span></a>
+            </div>
+            </div>
+          </div>
+
+          <div class="navTabContent w-full h-full" style="display: none" id="Sultangazi">
+            <div class="flex flex-col items-center">
+              <div class=" max-w-96 md:max-w-none font-extralight mb-4 text-center">
+                <p>Sultangazi mescidimiz sadece seminer saatlerinde açıktır.</p>
+              </div>
+              <div class="flex flex-row justify-around w-full space-x-4">
+                <div class=" card w-96 h-64 shadow-xl overflow-hidden bg-cover bg-center bg-no-repeat text-white" style=" background-image: url(assets/resimler/seminer-kadinlar.png);">
+                  <div class="flex flex-col items-center justify-center w-full h-full bg-black bg-opacity-50 *:text-center">
+                    <h2 class="text-xl font-medium mb-5">Kadınlar</h2>
+                  <p>Her Hafta Cumartesi</p>
+                  <p><i class='bi bi-clock mr-1'></i>14.00 'de</p>
+                  </div>
+                </div>
+                <div class=" card w-96 h-64 shadow-xl overflow-hidden bg-cover bg-center bg-no-repeat text-white" style=" background-image: url(assets/resimler/seminer-erkekler.png);">
+                  <div class="flex flex-col items-center justify-center w-full h-full bg-black bg-opacity-50 *:text-center">
+                    <h2 class="text-xl font-medium mb-5">Erkekler</h2>
+                  <p>Her Hafta Cumartesi</p>
+                  <p><i class='bi bi-clock mr-1'></i>21.00 'de</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col max-w-96 md:max-w-none space-y-2 items-center font-extralight my-8 text-center">
+                <a href="https://maps.app.goo.gl/1rbMnme7AYEP3GxE9" target="_blank" class="space-x-1 hover:text-sky-600 max-w-72 md:max-w-none"><i class="bi bi-geo-alt"></i><span>İsmetpaşa Mh. 95. Sk. No: 41/A Sultangazi/İstanbul</span></a>
+                <a href="https://api.whatsapp.com/send?phone=905357664545" target="_blank" class="space-x-1 hover:text-sky-600 text-center"><i class='bi bi-whatsapp'></i><span>+90 535 766 45 45</span></a>
+                <a href="mailto:info@tevhidddersleri.org"  class=" hover:text-sky-600 text-center space-x-1" target="_blank"><i class='bi bi-envelope'></i><span>info@tevhidddersleri.org</span></a>
+            </div>
+            </div>
+          </div>
+
+          <div class="navTabContent w-full h-full" style="display: none" id="Konya">
+            <div class="flex flex-col items-center">
+              <!-- <div class=" max-w-96 md:max-w-none font-extralight mb-4 text-center">
+                <p>Sultangazi mescidimiz sadece seminer saatlerinde açıktır.</p>
+              </div> -->
+              <div class="flex flex-row justify-around w-full space-x-4">
+                <div class=" card w-96 h-64 shadow-xl overflow-hidden bg-cover bg-center bg-no-repeat text-white" style=" background-image: url(assets/resimler/seminer-kadinlar.png);">
+                  <div class="flex flex-col items-center justify-center w-full h-full bg-black bg-opacity-50 *:text-center">
+                    <h2 class="text-xl font-medium mb-5">Kadınlar</h2>
+                  <p>Her Hafta Cumartesi</p>
+                  <p><i class='bi bi-clock mr-1'></i>12.00 'de</p>
+                  </div>
+                </div>
+                <div class=" card w-96 h-64 shadow-xl overflow-hidden bg-cover bg-center bg-no-repeat text-white" style=" background-image: url(assets/resimler/seminer-erkekler.png);">
+                  <div class="flex flex-col items-center justify-center w-full h-full bg-black bg-opacity-50 *:text-center">
+                    <h2 class="text-xl font-medium mb-5">Erkekler</h2>
+                  <p>Her Hafta Cumartesi</p>
+                  <p><i class='bi bi-clock mr-1'></i>21.00 'de</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col max-w-96 md:max-w-none space-y-2 items-center font-extralight my-8 text-center">
+                <a href="https://maps.app.goo.gl/xBKQY44NjS1VHZ447" target="_blank" class="space-x-1 hover:text-sky-600 max-w-72 md:max-w-none"><i class="bi bi-geo-alt"></i><span>Mengene Mh. Büyük Kumköprü Cd. No:78/A 42020 Karatay/Konya</span></a>
+                <a href="https://api.whatsapp.com/send?phone=905432255049" target="_blank" class="space-x-1 hover:text-sky-600 text-center"><i class='bi bi-whatsapp'></i><span>+90 543 225 50 49</span></a>
+                <a href="mailto:info@tevhidddersleri.org"  class=" hover:text-sky-600 text-center space-x-1" target="_blank"><i class='bi bi-envelope'></i><span>info@tevhidddersleri.org</span></a>
+            </div>
+            </div>
+          </div>
+
+          <div class="navTabContent w-full h-full" style="display: none" id="Diyarbakır">
+            <div class="flex flex-col items-center">
+              <div class=" max-w-96 md:max-w-none font-extralight mb-4 text-center">
+                <p>Diyarbakır mescidimiz sadece seminer saatlerinde açıktır.</p>
+              </div>
+              <div class="flex flex-row justify-around w-full space-x-4">
+                <div class=" card w-96 h-64 shadow-xl overflow-hidden bg-cover bg-center bg-no-repeat text-white" style=" background-image: url(assets/resimler/seminer-kadinlar.png);">
+                  <div class="flex flex-col items-center justify-center w-full h-full bg-black bg-opacity-50 *:text-center">
+                    <h2 class="text-xl font-medium mb-5">Kadınlar</h2>
+                  <p>Her Hafta Cumartesi</p>
+                  <p><i class='bi bi-clock mr-1'></i>13.00 'de</p>
+                  </div>
+                </div>
+                <div class=" card w-96 h-64 shadow-xl overflow-hidden bg-cover bg-center bg-no-repeat text-white" style=" background-image: url(assets/resimler/seminer-erkekler.png);">
+                  <div class="flex flex-col items-center justify-center w-full h-full bg-black bg-opacity-50 *:text-center">
+                    <h2 class="text-xl font-medium mb-5">Erkekler</h2>
+                  <p>Her Hafta Cumartesi</p>
+                  <p><i class='bi bi-clock mr-1'></i>20.00 'de</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col max-w-96 md:max-w-none space-y-2 items-center font-extralight my-8 text-center">
+                <a href="https://maps.app.goo.gl/zRsUNDwXma7MxPCn6" target="_blank" class="space-x-1 hover:text-sky-600 max-w-72 md:max-w-none"><i class="bi bi-geo-alt"></i><span>Fırat mah. 500. Sokak Taşkıran 2 sitesi D blok altı Kayapınar/Diyarbakır</span></a>
+                <a href="https://api.whatsapp.com/send?phone=905432255043" target="_blank" class="space-x-1 hover:text-sky-600 text-center"><i class='bi bi-whatsapp'></i><span>+90 543 225 50 43</span></a>
+                <a href="mailto:info@tevhidddersleri.org"  class=" hover:text-sky-600 text-center space-x-1" target="_blank"><i class='bi bi-envelope'></i><span>info@tevhidddersleri.org</span></a>
+            </div>
+            </div>
+          </div>
+
+          <div class="navTabContent w-full h-full" style="display: none" id="Van">
+            <div class="flex flex-col items-center">
+              <div class=" max-w-96 md:max-w-none font-extralight mb-4 text-center">
+                <p>İpekyolu mescidimiz sadece seminer saatlerinde açıktır.</p>
+              </div>
+              <div class="flex flex-row justify-around w-full space-x-4">
+                <div class=" card w-96 h-64 shadow-xl overflow-hidden bg-cover bg-center bg-no-repeat text-white" style=" background-image: url(assets/resimler/seminer-kadinlar.png);">
+                  <div class="flex flex-col items-center justify-center w-full h-full bg-black bg-opacity-50 *:text-center">
+                    <h2 class="text-xl font-medium mb-5">Kadınlar</h2>
+                  <p>Her Hafta Cumartesi</p>
+                  <p><i class='bi bi-clock mr-1'></i>12.00 'de</p>
+                  </div>
+                </div>
+                <div class=" card w-96 h-64 shadow-xl overflow-hidden bg-cover bg-center bg-no-repeat text-white" style=" background-image: url(assets/resimler/seminer-erkekler.png);">
+                  <div class="flex flex-col items-center justify-center w-full h-full bg-black bg-opacity-50 *:text-center">
+                    <h2 class="text-xl font-medium mb-5">Erkekler</h2>
+                  <p>Her Hafta Cumartesi</p>
+                  <p><i class='bi bi-clock mr-1'></i>20.00 'de</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col max-w-96 md:max-w-none space-y-2 items-center font-extralight my-8 text-center">
+                <a href="https://maps.app.goo.gl/TabskgptTdtYLbGB9" target="_blank" class="space-x-1 hover:text-sky-600 max-w-72 md:max-w-none"><i class="bi bi-geo-alt"></i><span><b>Kitabevi:</b> Vali Mithat Bey Mh. Gündüz 2. Sk. No: 2 A İpekyolu/Van</span></a>
+                <a href="https://maps.app.goo.gl/NVxGTLwDP8XcEtNF7" target="_blank" class="space-x-1 hover:text-sky-600 max-w-72 md:max-w-none"><i class="bi bi-geo-alt"></i><span><b>Mescid:</b> Bahçıvan Mh. Sıhke Cd. Karatekin Sk. Yavuz Canlı Apt. Kat: 2 İpekyolu/Van</span></a>
+                <a href="https://api.whatsapp.com/send?phone=905432255045" target="_blank" class="space-x-1 hover:text-sky-600 text-center"><i class='bi bi-whatsapp'></i><span>+90 543 225 50 45</span></a>
+                <a href="mailto:info@tevhidddersleri.org"  class=" hover:text-sky-600 text-center space-x-1" target="_blank"><i class='bi bi-envelope'></i><span>info@tevhidddersleri.org</span></a>
+            </div>
+            </div>
+          </div>
+
+          <div class="navTabContent w-full h-full" style="display: none" id="Etimesgut">
+            <div class="flex flex-col items-center">
+              <!-- <div class=" max-w-96 md:max-w-none font-extralight mb-4 text-center">
+                <p>Sultangazi mescidimiz sadece seminer saatlerinde açıktır.</p>
+              </div> -->
+              <div class="flex flex-row justify-around w-full space-x-4">
+                <div class=" card w-96 h-64 shadow-xl overflow-hidden bg-cover bg-center bg-no-repeat text-white" style=" background-image: url(assets/resimler/seminer-kadinlar.png);">
+                  <div class="flex flex-col items-center justify-center w-full h-full bg-black bg-opacity-50 *:text-center">
+                    <h2 class="text-xl font-medium mb-5">Kadınlar</h2>
+                  <p>Her Hafta Cumartesi</p>
+                  <p><i class='bi bi-clock mr-1'></i>13.00 'de</p>
+                  </div>
+                </div>
+                <div class=" card w-96 h-64 shadow-xl overflow-hidden bg-cover bg-center bg-no-repeat text-white" style=" background-image: url(assets/resimler/seminer-erkekler.png);">
+                  <div class="flex flex-col items-center justify-center w-full h-full bg-black bg-opacity-50 *:text-center">
+                    <h2 class="text-xl font-medium mb-5">Erkekler</h2>
+                  <p>Her Hafta Cumartesi</p>
+                  <p><i class='bi bi-clock mr-1'></i>21.00 'de</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col max-w-96 md:max-w-none space-y-2 items-center font-extralight my-8 text-center">
+                <a href="https://maps.app.goo.gl/LFwjBW4ZgPCePuEv5" target="_blank" class="space-x-1 hover:text-sky-600 max-w-72 md:max-w-none"><i class="bi bi-geo-alt"></i><span>Piyade Mh. İstasyon Cd. No: 190 Etimesgut/Ankara</span></a>
+                <a href="https://api.whatsapp.com/send?phone=905432255048" target="_blank" class="space-x-1 hover:text-sky-600 text-center"><i class='bi bi-whatsapp'></i><span>+90 543 225 50 48</span></a>
+                <a href="mailto:info@tevhidddersleri.org"  class=" hover:text-sky-600 text-center space-x-1" target="_blank"><i class='bi bi-envelope'></i><span>info@tevhidddersleri.org</span></a>
+            </div>
+            </div>
+          </div>
+
+          <div class="navTabContent w-full h-full" style="display: none" id="Bursa">
+            <div class="flex flex-col items-center">
+              <div class=" max-w-96 md:max-w-none font-extralight mb-4 text-center">
+                <p>Bursa mescidimiz sadece seminer saatlerinde açıktır.</p>
+              </div>
+              <div class="flex flex-row justify-around w-full space-x-4">
+                <div class=" card w-96 h-64 shadow-xl overflow-hidden bg-cover bg-center bg-no-repeat text-white" style=" background-image: url(assets/resimler/seminer-kadinlar.png);">
+                  <div class="flex flex-col items-center justify-center w-full h-full bg-black bg-opacity-50 *:text-center">
+                    <h2 class="text-xl font-medium mb-5">Kadınlar</h2>
+                  <p>Her Hafta Cumartesi</p>
+                  <p><i class='bi bi-clock mr-1'></i>13.00 'de</p>
+                  </div>
+                </div>
+                <div class=" card w-96 h-64 shadow-xl overflow-hidden bg-cover bg-center bg-no-repeat text-white" style=" background-image: url(assets/resimler/seminer-erkekler.png);">
+                  <div class="flex flex-col items-center justify-center w-full h-full bg-black bg-opacity-50 *:text-center">
+                    <h2 class="text-xl font-medium mb-5">Erkekler</h2>
+                  <p>Her Hafta Cumartesi</p>
+                  <p><i class='bi bi-clock mr-1'></i>21.00 'de</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col max-w-96 md:max-w-none space-y-2 items-center font-extralight my-8 text-center">
+                <a href="https://maps.app.goo.gl/FFcoQe1f2Nk1wL6u5" target="_blank" class="space-x-1 hover:text-sky-600 max-w-72 md:max-w-none"><i class="bi bi-geo-alt"></i><span>Bağlarbaşı Mh. 1. Hürriyet Cd. 1. Sedir Sk. No: 1 16160 Osmangazi/Bursa</span></a>
+                <a href="https://api.whatsapp.com/send?phone=905432255046" target="_blank" class="space-x-1 hover:text-sky-600 text-center"><i class='bi bi-whatsapp'></i><span>+90 543 225 50 46</span></a>
+                <a href="mailto:info@tevhidddersleri.org"  class=" hover:text-sky-600 text-center space-x-1" target="_blank"><i class='bi bi-envelope'></i><span>info@tevhidddersleri.org</span></a>
+            </div>
+            </div>
+          </div>
+
+          <div class="navTabContent w-full h-full" style="display: none" id="Erciş">
+            <div class="flex flex-col items-center">
+              <div class=" max-w-96 md:max-w-none font-extralight mb-4 text-center">
+                <p>Erciş mescidimiz sadece seminer saatlerinde açıktır.</p>
+              </div>
+              <div class="flex flex-row justify-around w-full space-x-4">
+                <div class=" card w-96 h-64 shadow-xl overflow-hidden bg-cover bg-center bg-no-repeat text-white" style=" background-image: url(assets/resimler/seminer-kadinlar.png);">
+                  <div class="flex flex-col items-center justify-center w-full h-full bg-black bg-opacity-50 *:text-center">
+                    <h2 class="text-xl font-medium mb-5">Kadınlar</h2>
+                  <p>Her Hafta Cumartesi</p>
+                  <p><i class='bi bi-clock mr-1'></i>13.00 'de</p>
+                  </div>
+                </div>
+                <div class=" card w-96 h-64 shadow-xl overflow-hidden bg-cover bg-center bg-no-repeat text-white" style=" background-image: url(assets/resimler/seminer-erkekler.png);">
+                  <div class="flex flex-col items-center justify-center w-full h-full bg-black bg-opacity-50 *:text-center">
+                    <h2 class="text-xl font-medium mb-5">Erkekler</h2>
+                  <p>Her Hafta Cumartesi</p>
+                  <p><i class='bi bi-clock mr-1'></i>20.00 'de</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col max-w-96 md:max-w-none space-y-2 items-center font-extralight my-8 text-center">
+                <a href="https://maps.app.goo.gl/CoYuYMC6E5djPu5z6" target="_blank" class="space-x-1 hover:text-sky-600 max-w-72 md:max-w-none"><i class="bi bi-geo-alt"></i><span>Kışla Mah. Şehitler Cad. No: 10 Erciş/Van</span></a>
+                <a href="https://api.whatsapp.com/send?phone=905432255030" target="_blank" class="space-x-1 hover:text-sky-600 text-center"><i class='bi bi-whatsapp'></i><span>+90 543 225 50 30</span></a>
+                <a href="mailto:info@tevhidddersleri.org"  class=" hover:text-sky-600 text-center space-x-1" target="_blank"><i class='bi bi-envelope'></i><span>info@tevhidddersleri.org</span></a>
+            </div>
+            </div>
+          </div>
+
+          <div class="navTabContent w-full h-full" style="display: none" id="Adana">
+            <div class="flex flex-col items-center">
+              <!-- <div class=" max-w-96 md:max-w-none font-extralight mb-4 text-center">
+                <p>Sultangazi mescidimiz sadece seminer saatlerinde açıktır.</p>
+              </div> -->
+              <div class="flex flex-row justify-around w-full space-x-4">
+                <div class=" card w-96 h-64 shadow-xl overflow-hidden bg-cover bg-center bg-no-repeat text-white" style=" background-image: url(assets/resimler/seminer-kadinlar.png);">
+                  <div class="flex flex-col items-center justify-center w-full h-full bg-black bg-opacity-50 *:text-center">
+                    <h2 class="text-xl font-medium mb-5">Kadınlar</h2>
+                  <p>Her Hafta Cumartesi</p>
+                  <p><i class='bi bi-clock mr-1'></i>--.-- 'de</p>
+                  </div>
+                </div>
+                <div class=" card w-96 h-64 shadow-xl overflow-hidden bg-cover bg-center bg-no-repeat text-white" style=" background-image: url(assets/resimler/seminer-erkekler.png);">
+                  <div class="flex flex-col items-center justify-center w-full h-full bg-black bg-opacity-50 *:text-center">
+                    <h2 class="text-xl font-medium mb-5">Erkekler</h2>
+                  <p>Her Hafta Cumartesi</p>
+                  <p><i class='bi bi-clock mr-1'></i>--.-- 'de</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col max-w-96 md:max-w-none space-y-2 items-center font-extralight my-8 text-center">
+                <a href="https://maps.app.goo.gl/LAu9PiKCFSwmBjb7A" target="_blank" class="space-x-1 hover:text-sky-600 max-w-72 md:max-w-none"><i class="bi bi-geo-alt"></i><span>Reşatbey Mh. 62008. Skn No:10 İşyeri-2 Seyhan/Adana</span></a>
+                <a href="https://api.whatsapp.com/send?phone=905556550070" target="_blank" class="space-x-1 hover:text-sky-600 text-center"><i class='bi bi-whatsapp'></i><span>+90 555 655 00 70</span></a>
+                <a href="mailto:info@tevhidddersleri.org"  class=" hover:text-sky-600 text-center space-x-1" target="_blank"><i class='bi bi-envelope'></i><span>info@tevhidddersleri.org</span></a>
+            </div>
+            </div>
+          </div>
+
+          <div class="navTabContent w-full h-full" style="display: none" id="Kırıkkale">
+            <div class="flex flex-col items-center">
+              <!-- <div class=" max-w-96 md:max-w-none font-extralight mb-4 text-center">
+                <p>Sultangazi mescidimiz sadece seminer saatlerinde açıktır.</p>
+              </div> -->
+              <div class="flex flex-row justify-around w-full space-x-4">
+                <div class=" card w-96 h-64 shadow-xl overflow-hidden bg-cover bg-center bg-no-repeat text-white" style=" background-image: url(assets/resimler/seminer-kadinlar.png);">
+                  <div class="flex flex-col items-center justify-center w-full h-full bg-black bg-opacity-50 *:text-center">
+                    <h2 class="text-xl font-medium mb-5">Kadınlar</h2>
+                  <p>Her Hafta Cumartesi</p>
+                  <p><i class='bi bi-clock mr-1'></i>--.-- 'de</p>
+                  </div>
+                </div>
+                <div class=" card w-96 h-64 shadow-xl overflow-hidden bg-cover bg-center bg-no-repeat text-white" style=" background-image: url(assets/resimler/seminer-erkekler.png);">
+                  <div class="flex flex-col items-center justify-center w-full h-full bg-black bg-opacity-50 *:text-center">
+                    <h2 class="text-xl font-medium mb-5">Erkekler</h2>
+                  <p>Her Hafta Cumartesi</p>
+                  <p><i class='bi bi-clock mr-1'></i>--.-- 'de</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col max-w-96 md:max-w-none space-y-2 items-center font-extralight my-8 text-center">
+                <a href="https://maps.app.goo.gl/S9Z6n8TT3ahz5gCH8" target="_blank" class="space-x-1 hover:text-sky-600 max-w-72 md:max-w-none"><i class="bi bi-geo-alt"></i><span>Yenişehir Mahallesi Özbek Saran Sokak No:3/A Yahşihan/ Kırıkkale</span></a>
+                <a href="https://api.whatsapp.com/send?phone=905363917660" target="_blank" class="space-x-1 hover:text-sky-600 text-center"><i class='bi bi-whatsapp'></i><span>+90 536 391 76 60</span></a>
+                <a href="mailto:info@tevhidddersleri.org"  class=" hover:text-sky-600 text-center space-x-1" target="_blank"><i class='bi bi-envelope'></i><span>info@tevhidddersleri.org</span></a>
+            </div>
+            </div>
+          </div>
+
+        </div>
+      </container>
+    </section>
+
+    <section id="dergilerimiz" class="py-14 md:py-24 w-full bg-gradient-to-tr from-orange-100 to-green-100 ">
+      <div id="dergiler" class="flex flex-col space-y-8 md:space-y-0 items-center justify-center w-full px-4">
+        <div id="tevhidDergi-web" class="hidden md:block w-full max-w-5xl ">
+          <div class="flex flex-col md:flex-row">
+            <img class="w-[350px] rounded-xl" src="assets/resimler/dergiler/tevhid-cocuk-dergileri.jpg"/> 
+            <div class="flex flex-col items-end justify-center">
+              <h2 class="text-lg md:text-3xl">Tevhid Dergileri</h2>
+              <p class="py-6 text-right">
+                Cemaatin davet programına uygun olarak başta Tevhid ve Sünneti gündemleştirmekte, bunun yanı sıra ilmi, ahlaki, menheci ve siyasi konulara dair makaleler neşretmektedir.
+              </p>
+              <a href="https://tevhiddergisi.org/tevhid-dergisi/" target="_blank">
+                  <button class="btn btn-outline">Detaylı Bilgi</button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div id="tevhidDergi-mobil" class="md:hidden rounded-xl bg-cover w-[350px] h-[294px] overflow-hidden font-bold border border-black" style="background-image: url(assets/resimler/dergiler/tevhid-cocuk-dergileri.jpg);">
+          <div class="flex flex-col justify-center text-center w-full h-full bg-white bg-opacity-70 text-white p-3">
+            <h2 class="text-3xl md:text-3xl text-slate-800">Tevhid Dergileri</h2>
+            <p class="py-4 text-lg text-slate-800">
+              Cemaatin davet programına uygun olarak başta Tevhid ve Sünnetir.
+            </p>
+            <a href="https://tevhiddergisi.org/tevhid-dergisi/" target="_blank">
+                <button class="btn btn-outline text-white bg-slate-900 bg-opacity-60">Detaylı Bilgi</button>
+            </a>
+          </div>
+        </div>
+        
+        <div id="tevhidCocukDergi-web" class="hidden md:block w-full max-w-5xl">
+          <div class="flex flex-col md:flex-row">
+            <div class="flex flex-col justify-center">
+              <h2 class="w-96 text-lg md:text-3xl bg-gradient-to-r from-pink-500 via-indigo-500 to-purple-500 bg-clip-text text-transparent">Tevhid Çocuk Dergileri</h2>
+              <p class="py-6 bg-gradient-to-tr from-pink-500 via-indigo-500 to-sky-500 bg-clip-text text-transparent">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+              <a href="https://tevhiddergisi.org/tevhid-cocuk-dergisi/" target="_blank">
+                  <button class="btn border border-indigo-500 hover:border-blue-600 bg-transparent hover:bg-indigo-500 text-indigo-500 hover:text-white">Detaylı Bilgi</button>
+              </a>
+            </div>
+
+            <img class="w-[350px] rounded-xl" src="assets/resimler/dergiler/tevhid-cocuk-dergileri.jpg"/>
+          </div>
+        </div>
+        
+        <div id="tevhidCocukDergi-mobil" class="md:hidden rounded-xl bg-cover w-[350px] h-[294px] overflow-hidden font-bold border border-indigo-700" style="background-image: url(assets/resimler/dergiler/tevhid-cocuk-dergileri.jpg);">
+          <div class="flex flex-col justify-center text-center w-full h-full bg-white bg-opacity-70 text-white">
+            <h2 class="text-3xl md:text-3xl bg-gradient-to-r from-pink-500 to-indigo-700 bg-clip-text text-transparent">Tevhid Çocuk Dergileri</h2>
+            <p class="py-4 text-lg text-indigo-700">
+              Lorem impsum Cemaatin davet programına uygun olarak başta.
+            </p>
+            <a href="https://tevhiddergisi.org/tevhid-cocuk-dergisi/" target="_blank">
+                <button class="btn btn-outline text-white bg-indigo-500 bg-opacity-80">Detaylı Bilgi</button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section id="insaniYardim" class="w-full py-14 md:py-24">
+      <div class="flex flex-col items-center justify-center px-2">
+        <div class="flex flex-col w-full items-center justify-center mb-10">
+          <h2 class='flex justify-center text-center text-xl md:text-2xl font-extralight max-w-64 md:max-w-none uppercase'>İnsani Yardım</h2>
+          <span class="text-green-500">______</span>
+        </div>
+        <div class=" flex flex-col w-full max-w-3xl justify-center space-y-4">
+          <div class="flex flex-row items justify-between *:rounded-xl *:shadow-xl *:border *:border-white *:h-[90px] *:md:h-44 *:w-auto">
+            <img src="assets/resimler/ecirkapisi_resim1.webp" class="">
+            <img src="assets/resimler/ecirkapisi_resim3.jpg" class="">
+            <img src="assets/resimler/ecirkapisi_resim2.webp" class="">
+          </div>
+          <div class="flex flex-col items-center font-extralight">
+            <p class="text-center my-2 md:my-4">Din, dil, ırk ve coğrafya gözetmeksizin ihtiyaç sahibi insanları tespit ederek, kendilerini rencide etmeden, hayır sahiplerinin yaptıkları yardımlar ile gıda, giyim, ev eşyası, kumanya, sağlık, fatura, kira ve burs gibi ihtiyaçlarının karşılanmasına vesile olmaktayız. Bununla birlikte İslam dininin merhametli ve paylaşımcı yönünü insanlara göstermeyi de amaçlıyoruz. Bu doğrultuda mevzuata ve yönetmeliklere uygun bir şekilde faaliyet göstermekteyiz.</p>
+          </div>
+          <div class="flex justify-center space-x-4">
+            <a href="https://www.ecirkapisi.org/bagisyap?tab=hepsi" target="_blank"><button class="btn btn-outline hover:text-white hover:bg-green-800">Bağış Yap</button></a>
+            <a href="https://www.ecirkapisi.org/about-us" target="_blank"><button class="btn btn-outline bg-green-600 bg-opacity-60 text-white border-green-600 hover:bg-green-800">Detaylı Bilgi</button></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sanat2" class="pt-14 md:pt-24 pb-52 md:pb-64 w-full bg-cover bg-bottom bg-no-repeat" style="background-image: url(assets/resimler/sanat-bg.png);">
+      <div class="flex w-full flex-col items-center">
+        <div class="flex flex-col w-full items-center max-w-4xl px-2 md:px-0">
+          <!-- <h2 class='flex justify-center text-center text-xl md:text-2xl font-extralight max-w-64 md:max-w-none uppercase'>Sanat</h2>
+          <span class="text-red-500 mb-5 md:mb-10">_____</span> -->
+
+          <div class="grid grid-cols-2 gap-4 md:gap-10 *:bg-white *:shadow-xl *:rounded-xl *:overflow-hidden">
+            <div class="">
+              <div class="flex justify-center items-center bg-cover bg-center bg-no-repeat" style="background-image: url(assets/resimler/sanat-ezgiler-ve-marslar.png);">
+                <h2 class="text-lg md:text-3xl text-white bg-black bg-opacity-50 text-clip w-full h-24 md:h-32 justify-center items-center flex">Ezgiler ve Marşlar</h2>
+              </div>
+              <div class="p-1 pt-2 md:p-5 space-y-2 *:text-center">
+                <p class="text-xs md:text-base">
+                  Tevhidi Uyanış ekibine ait eserlerde def dışında çalgı aleti kullanılmamaktadır. Ezgilerde ya da marşlarda def dışındaki tüm sesler ‘A capella veya Beatbox’ tekniği ile oluşturulmuştur.</p>
+                  <div class="flex flex-col md:flex-row-reverse justify-between items-center md:mx-3">
+                    <div class="flex flex-row justify-center md:justify-start space-x-5 text-lg my-2 md:my-0 md:text-base">
+                      <a href="https://www.youtube.com/watch?v=BMjcrh6vD9Y&list=PLGFjVaEW8hd6SVHcC_iEPzbXNtRXGhYcF" target="_blank"><i class="bi bi-youtube"></i></a>
+                      <a href="https://x.com/uyanisofficial" target="_blank"><i class="bi bi-twitter-x"></i></a>
+                      <a href="https://www.instagram.com/uyanisofficiall/" target="_blank"><i class="bi bi-instagram"></i></a>
+                      <a href="https://t.co/6VaIGtROIe" target="_blank"><i class="bi bi-whatsapp"></i></a>
+                      <!-- <a href="mailto:info@tevhidddersleri.org" target="_blank"><i class="bi bi-envelope"></i></a> -->
+                    </div>
+                  </div>
+              </div>
+            </div>
+
+            <div class="">
+              <div class="flex justify-center items-center bg-cover bg-center bg-no-repeat" style="background-image: url(assets/resimler/sanat-tiyatro.png);">
+                <h2 class="text-lg md:text-3xl text-white bg-black bg-opacity-30 text-clip w-full h-24 md:h-32 justify-center items-center flex">Sahne Gösterileri</h2>
+              </div>
+              <div class="p-1 pt-2 md:p-5 space-y-2 *:text-center">
+                <p class="text-xs md:text-base">
+                  Bazen gerçeği görmek için uzaktan bakmak gerekir... Tevhid Sanat ekibinin hazırladığı, İslam kültürünü, yaşamın içindeki yanlış veya doğruları konu edinen tiyatro gösterileri sizlerle.</p>
+                  <div class="flex flex-col md:flex-row justify-between md:mx-3 items-center">
+                    <div class="flex flex-row sosyalMedya space-x-5 text-lg my-2 md:my-0 md:text-base">
+                      <a href="https://www.youtube.com/watch?v=u2roszSQWaI&list=PLGFjVaEW8hd5gdHD4R900fgqdopBJPsfb" target="_blank"><i class="bi bi-youtube"></i></a>
+                      <!-- <a href="" target="_blank"><i class="bi bi-twitter-x"></i></a> -->
+                      <!-- <a href="" target="_blank"><i class="bi bi-instagram"></i></a> -->
+                      <a href="https://api.whatsapp.com/send?phone=905357664545" target="_blank"><i class="bi bi-whatsapp"></i></a>
+                      <a href="mailto:info@tevhidddersleri.org" target="_blank"><i class="bi bi-envelope"></i></a>
+                    </div>
+                  </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="iletisim" class="pb-16 md:pb-24 w-full">
+        <div class="flex flex-col w-full items-center *:max-w-4xl space-y-3 px-2 md:px-0 ">
+          <div class="flex w-full flex-col items-center">
+            <h2 class='flex justify-center text-center text-xl md:text-2xl font-extralight max-w-64 md:max-w-none uppercase'>Sık Sorulan Sorular</h2>
+          <span class="text-yellow-500">_____</span>
+          </div>
+          <div id="SSS" class="flex flex-col justify-center max-w-xl w-lvw *:rounded-lg md:*:rounded-xl *:border *:border-slate-50 *:p-2 md:*:p-4 *:my-2 *:text-slate-700 *:shadow-md px-2 md:px-0">
+          
+            <div class="soruKutusu flex flex-col relative group/item hover:bg-blue-50 cursor-pointer">
+              <h3 id="accordion" class="soruBasligi cursor-pointer font-light">İslam için ben ne yapabilirim?</h3>
+              <p hidden class="soruAciklamasi text-sm font-extralight pt-4 overflow-y-hidden transition-transform ease-linear duration-1000">Birlikten kuvvet doğar prensibiyle ortaya çıkan <a href="https://tevhid.notion.site/Ensar-Ol-Projesi-ce5361bc6d06469e855b229b32d84077" class="text-sky-700 hover:text-sky-400">Ensar Ol</a> projesi, yetenekleri İslam davası için biraraya getiriyor. Katkıda bulunacağınızı düşündüğünüz alanlara <a href="https://tevhid.notion.site/Ensar-Ol-Projesi-ce5361bc6d06469e855b229b32d84077" class="text-sky-700 hover:text-sky-400">buradan</a> başvurabilirsiniz.</p>
+              <i class='bi bi-chevron-right absolute right-2 md:right-4 text-base md:text-lg transition-transform ease-in-out duration-1000'></i>
+            </div>
+            <div class="soruKutusu flex flex-col relative group/item hover:bg-blue-50 cursor-pointer">
+              <h3 id="accordion" class="soruBasligi cursor-pointer font-light">İlim nasıl öğrenilir? (Kişisel program)</h3>
+              <p hidden class="soruAciklamasi text-sm font-extralight pt-4">2 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <i class='bi bi-chevron-right absolute right-2 md:right-4 text-base md:text-lg transition-transform ease-in-out duration-1000'></i>
+            </div>
+            <div class="soruKutusu flex flex-col relative group/item hover:bg-blue-50 cursor-pointer">
+              <h3 id="accordion" class="soruBasligi cursor-pointer font-light">Sohbetlerinize nasıl katılabilirim?</h3>
+              <p hidden class="soruAciklamasi text-sm font-extralight pt-4">3 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <i class='bi bi-chevron-right absolute right-2 md:right-4 text-base md:text-lg transition-transform ease-in-out duration-1000'></i>
+            </div>
+            <div class="soruKutusu flex flex-col relative group/item hover:bg-blue-50 cursor-pointer">
+              <h3 id="accordion" class="soruBasligi cursor-pointer font-light">Hangi kitapları, hangi sırayla okumalıyım?</h3>
+              <p hidden class="soruAciklamasi text-sm font-extralight pt-4">3 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <i class='bi bi-chevron-right absolute right-2 md:right-4 text-base md:text-lg transition-transform ease-in-out duration-1000'></i>
+            </div>
+
+          </div>
+          
+          <div id="mesajKutusu" class="card w-72 md:w-96 border border-slate-100 bg-blue-50 shadow-xl">
+            <div class="p-3 py-5 space-y-2 text-center text-slate-700 font-extralight">
+              <h2 class="text-base md:text-xl w-full">Bize buradan ulaşabilirsiniz</h2>
+              <p>Yukarıda yanıtını bulamadığınız sorularınızı ya da mesajlarınızı iletebilirsiniz.</p>
+              <div class="mt-3 justify-center">
+                <button id="iletisimFormunuAc" class="btn btn-outline bg-blue-600 hover:bg-blue-800 border-none hover:border-none whitespace-nowrap text-white">Mesaj Gönder</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+    </section>
+
+    <section id="footer" class="w-full flex flex-col items-center mt-10 px-2 md:px-0 *:max-w-7xl">
+      <footer class="w-full grid grid-cols-2 max-h-min md:grid-cols-3 xl:grid-cols-6 gap-4 m-0 bg-white *:flex *:flex-col *:items-center text-slate-600 font-extralight">
+        <nav>
+          <h6 class="font-normal text-slate-500 uppercase pb-5">Services</h6>
+          <a class="link link-hover">Branding</a>
+          <a class="link link-hover">Design</a>
+          <a class="link link-hover">Marketing</a>
+          <a class="link link-hover">Advertisement</a>
+        </nav>
+        <nav>
+          <h6 class="footer-title">Company</h6>
+          <a class="link link-hover">About us</a>
+          <a class="link link-hover">Contact</a>
+          <a class="link link-hover">Jobs</a>
+          <a class="link link-hover">Press kit</a>
+        </nav>
+        <nav>
+          <h6 class="footer-title">Legal</h6>
+          <a class="link link-hover">Terms of use</a>
+          <a class="link link-hover">Privacy policy</a>
+          <a class="link link-hover">Cookie policy</a>
+        </nav>
+        <nav>
+          <h6 class="footer-title">Social</h6>
+          <a class="link link-hover">Twitter</a>
+          <a class="link link-hover">Instagram</a>
+          <a class="link link-hover">Facebook</a>
+          <a class="link link-hover">Github</a>
+        </nav>
+        <nav>
+          <h6 class="footer-title">Explore</h6>
+          <a class="link link-hover">Features</a>
+          <a class="link link-hover">Enterprise</a>
+          <a class="link link-hover">Security</a>
+          <a class="link link-hover">Pricing</a>
+        </nav>
+        <nav>
+          <h6 class="footer-title">Apps</h6>
+          <a class="link link-hover">Mac</a>
+          <a class="link link-hover">Windows</a>
+          <a class="link link-hover">iPhone</a>
+          <a class="link link-hover">Android</a>
+        </nav>
+      </footer>
+      <footer class="my-5 flex flex-row justify-between items-center bg-white w-full border-t pt-4">
+        <aside class="flex flex-row space-x-4 items-center">
+          <img src="assets/resimler/logolar/tvs-logo.png" class="w-14" alt="">
+          
+        </aside>
+        <div class="flex flex-row sosyalMedya my-4 space-x-4 text-xl">
+          <a href="" target="_blank"><i class="bi bi-youtube"></i></a>
+          <a href="" target="_blank"><i class="bi bi-twitter-x"></i></a>
+          <a href="" target="_blank"><i class="bi bi-instagram"></i></a>
+          <a href="https://api.whatsapp.com/send?phone=905453731515" target="_blank"><i class="bi bi-whatsapp"></i></a>
+          <a href="mailto:info@tevhidddersleri.org" target="_blank"><i class="bi bi-envelope"></i></a>
+        </div>
+        
+      </footer>
+      
+    </section>
+  </section>
+
+  
+
+<script src="script.js"></script>
+</body>
+</html>

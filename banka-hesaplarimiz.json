@@ -1,0 +1,26 @@
+[
+    {
+        "bankaAdi":"QNB",
+        "aliciAdi":"Hemdem Akademi",
+        "bankaSubesi":"111",
+        "hesapNo":"69339666",
+        "iban":"TR11 0011 1000 0000 1111 1111 11",
+        "bankaLogosu":"qnb-finansbank.png"
+    },
+    {
+        "bankaAdi":"Yapıkredi",
+        "aliciAdi":"Hemdem Akademi",
+        "bankaSubesi":"111",
+        "hesapNo":"69339666",
+        "iban":"TR11 0011 1000 0000 1111 1111 11",
+        "bankaLogosu":"yapikredi.png"
+    },
+    {
+        "bankaAdi":"QNB",
+        "aliciAdi":"Hemdem Akademi",
+        "bankaSubesi":"111",
+        "hesapNo":"69339666",
+        "iban":"TR11 0011 1000 0000 1111 1111 11",
+        "bankaLogosu":"qnb-finansbank.png"
+    }
+]

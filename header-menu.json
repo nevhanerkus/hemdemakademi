@@ -1,0 +1,29 @@
+[
+    {
+        "baslik" : "Eğitimler",
+        "altbasliklar" : "",
+        "link": "egitimler.html"
+    },
+    {
+        "baslik": "Eğitmenler",
+        "link": "egitimler.html"
+    },
+    {
+        "baslik" : "Dergiler",
+        "altbasliklar" : [["Atak Büfe","egitimler.html"], ["Hemdem Cafe","egitimler.html"], ["Atak Spor","egitimler.html"]],
+        "link": "egitimler.html"
+    },
+    {
+        "baslik" : "Çocuk Dergileri",
+        "link": "#",
+        "altbasliklar": [["Ezgi ve Marşlar","egitimler.html"], ["Sahne Gösterileri","egitimler.html"]]
+    },
+    {
+        "baslik": "Hakkımızda",
+        "link": "egitimler.html"
+    },
+    {
+        "baslik": "iletişim",
+        "link" : "iletisim.html"
+    }
+]
