@@ -11,7 +11,7 @@
         "gorsel":"egitim-1.jpg",
         "buyukGorsel":"egitim-1b.jpg",
         "aciklama":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-        "link": "kitap-tahlili-atolyesi.html"
+        "link": "hemdemakademi/kitap-tahlili-atolyesi.html"
     },
     {   "id" : "",
         "baslik" : "Fermantasyon Atölyesi",
@@ -25,7 +25,7 @@
         "gorsel":"egitim-2.jpg",
         "buyukGorsel":"egitim-2b.jpg",
         "aciklama":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-        "link": "fermantasyon-atolyesi.html"
+        "link": "hemdemakademi/fermantasyon-atolyesi.html"
     },
     {   "id" : "",
         "baslik" : "Soğuk İşlem Maserat Yağ Eğitimi",
@@ -39,7 +39,7 @@
         "gorsel":"egitim-3.jpg",
         "buyukGorsel":"egitim-3b.jpg",
         "aciklama":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-        "link": "soguk-islem-maserat-yag-atolyesi.html"
+        "link": "hemdemakademi/soguk-islem-maserat-yag-atolyesi.html"
     },
     {   "id" : "",
         "baslik" : "Pedagoji Atölyesi",
@@ -53,7 +53,7 @@
         "gorsel":"egitim-4.jpg",
         "buyukGorsel":"egitim-4b.jpg",
         "aciklama":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-        "link": "pedagoji-atolyesi.html"
+        "link": "hemdemakademi/pedagoji-atolyesi.html"
     },
     {   "id" : "",
         "baslik" : "Resim Analiz Atölyesi",
@@ -67,7 +67,7 @@
         "gorsel":"egitim-5.jpg",
         "buyukGorsel":"egitim-5b.jpg",
         "aciklama":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-        "link": "resim-analiz-atolyesi.html"
+        "link": "hemdemakademi/resim-analiz-atolyesi.html"
     },
     {   "id" : "",
         "baslik" : "Çocuklar İçin Yazarlık Atölyesi",
@@ -81,6 +81,6 @@
         "gorsel":"egitim-6.jpg",
         "buyukGorsel":"egitim-6b.jpg",
         "aciklama":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-        "link": "cocuklar-icin-yazarlik-atolyesi.html"
+        "link": "hemdemakademi/cocuklar-icin-yazarlik-atolyesi.html"
     }
 ]
